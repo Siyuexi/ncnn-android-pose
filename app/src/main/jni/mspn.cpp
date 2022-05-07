@@ -334,46 +334,58 @@ int SLPNet::load(AAssetManager* mgr, const char* modeltype, int _target_size, co
     return 0;
 }
 
-int SLPNet::detect_and_draw(const cv::Mat& rgb, cv::Rect_<float> rect)
+int SLPNet::detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects)
 {
-    std::vector<float> center{0.0,0.0};
-    std::vector<float> scale{0.0,0.0};
-    box_to_center_scale(rect, img_size[0], img_size[1], center, scale);
+    for(int j = 0;j<objects.size();j++) {
+        //only picked "person" label
+        if(objects[j].label!=0){
+            continue;
+        }
+        cv::Rect_<float> rect = objects[j].rect;
+        std::vector<float> center{0.0, 0.0};
+        std::vector<float> scale{0.0, 0.0};
+        box_to_center_scale(rect, img_size[0], img_size[1], center, scale);
 
-    cv::Mat input;
+        cv::Mat input;
 
-    cv::Mat tran = get_affine_transform(center, scale, 0, img_size,0);
+        cv::Mat tran = get_affine_transform(center, scale, 0, img_size, 0);
 
-    cv::warpAffine(rgb, input, tran, cv::Size(img_size[0],img_size[1]), cv::INTER_LINEAR);
+        cv::warpAffine(rgb, input, tran, cv::Size(img_size[0], img_size[1]), cv::INTER_LINEAR);
 
-    _normalize(input);
+        _normalize(input);
 
-    convertMat2pointer(input, x);
+        convertMat2pointer(input, x);
 
-    ncnn::Mat in(192, 256, 3, x);
-    ncnn:: Extractor ex = slpnet.create_extractor();
-    ex.input("data", in);
-    ncnn::Mat out;
-    ex.extract("output_heatmaps", out);
-    float* preds = new float[out.c*2+2];
-    get_final_preds(out, center, scale, preds);
+        ncnn::Mat in(192, 256, 3, x);
+        ncnn::Extractor ex = slpnet.create_extractor();
+        ex.input("data", in);
+        ncnn::Mat out;
+        ex.extract("output_heatmaps", out);
+        float *preds = new float[out.c * 2 + 2];
+        get_final_preds(out, center, scale, preds);
 
-    preds[34] = (preds[5] + preds[6]) / 2;
-    preds[35] = (preds[5+17] + preds[+17]) / 2;
-    int line_begin, line_end, iter, point_begin;
-    line_begin = 0;
-    line_end = pair_line.size();
-    iter = 1;
-    point_begin = 0;
-    for (int i = line_begin; i < line_end; i = i + 2) {
-        cv::line(rgb, cv::Point2d(int(preds[pair_line[i]]), int(preds[pair_line[i] + 17])),
-                 cv::Point2d(int(preds[pair_line[i + 1]]), int(preds[pair_line[i + 1] + 17])), cv::Scalar(153, 102, 255), 4);
-    }
+        preds[34] = (preds[5] + preds[6]) / 2;
+        preds[35] = (preds[5 + 17] + preds[+17]) / 2;
+        int line_begin, line_end, iter, point_begin;
+        line_begin = 0;
+        line_end = pair_line.size();
+        iter = 1;
+        point_begin = 0;
+        for (int i = line_begin; i < line_end; i = i + 2) {
+            //only picked "person" label
+            if (objects[i].label != 0) {
+                continue;
+            }
+            cv::line(rgb, cv::Point2d(int(preds[pair_line[i]]), int(preds[pair_line[i] + 17])),
+                     cv::Point2d(int(preds[pair_line[i + 1]]), int(preds[pair_line[i + 1] + 17])),
+                     cv::Scalar(153, 102, 255), 4);
+        }
 
-    for (int i = point_begin; i < 17; i=i+iter) {
-        int x_coord = int(preds[i]);
-        int y_coord = int(preds[i + 17]);
-        cv::circle(rgb, cv::Point2d(x_coord, y_coord), 1, (0,255,0), 2);
+        for (int i = point_begin; i < 17; i = i + iter) {
+            int x_coord = int(preds[i]);
+            int y_coord = int(preds[i + 17]);
+            cv::circle(rgb, cv::Point2d(x_coord, y_coord), 1, (0, 255, 0), 2);
+        }
     }
 
     return 0;

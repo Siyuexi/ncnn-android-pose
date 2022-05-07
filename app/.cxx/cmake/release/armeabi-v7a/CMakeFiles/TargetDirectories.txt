@@ -1,3 +1,3 @@
-C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/ncnnyolox.dir
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/ncnnmodel.dir
 C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir

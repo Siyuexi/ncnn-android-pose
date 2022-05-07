@@ -25,28 +25,27 @@
 17-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:10:18-52
 18        android:label="@string/app_name"
 18-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:9:18-50
-19        android:roundIcon="@mipmap/ic_launcher_round"
+19        android:roundIcon="@mipmap/ic_launcher_round" >
 19-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:11:18-63
-20        android:testOnly="true" >
-21        <activity
-21-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:12:9-19:20
-22            android:name="com.tencent.ncnnyolox.MainActivity"
-22-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:12:19-46
-23            android:label="@string/app_name"
-23-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:13:19-51
-24            android:screenOrientation="portrait" >
-24-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:14:19-55
-25            <intent-filter>
-25-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:15:13-18:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:16:17-69
-26-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:16:25-66
-27
-28                <category android:name="android.intent.category.LAUNCHER" />
-28-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:17:17-77
-28-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:17:27-74
-29            </intent-filter>
-30        </activity>
-31    </application>
-32
-33</manifest>
+20        <activity
+20-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:12:9-19:20
+21            android:name="com.tencent.ncnnhpe.MainActivity"
+21-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:12:19-66
+22            android:label="@string/app_name"
+22-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:13:19-51
+23            android:screenOrientation="portrait" >
+23-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:14:19-55
+24            <intent-filter>
+24-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:15:13-18:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:16:17-69
+25-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:16:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:17:17-77
+27-->C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:17:27-74
+28            </intent-filter>
+29        </activity>
+30    </application>
+31
+32</manifest>

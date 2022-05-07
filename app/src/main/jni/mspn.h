@@ -11,6 +11,9 @@ extern int k1;
 
 #include <net.h>
 
+#include "yolox.h"
+
+
 
 class SLPNet
 {
@@ -21,7 +24,7 @@ public:
 
     int load(AAssetManager* mgr, const char* modeltype, int target_size, const float* mean_vals, const float* norm_vals, bool use_gpu = false);
 
-    int detect_and_draw(const cv::Mat& rgb, cv::Rect_<float> rect);
+    int detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects);
 
 private:
 

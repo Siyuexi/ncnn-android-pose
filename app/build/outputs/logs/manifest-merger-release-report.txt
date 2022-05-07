@@ -9,7 +9,7 @@ INJECTED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-
 INJECTED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:2:1-21:12
 INJECTED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:2:1-21:12
 	package
-		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:3:7-38
+		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:3:7-36
 		INJECTED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -40,14 +40,14 @@ MERGED from [com.android.support:support-v4:24.0.0] C:\Users\Siyuexi\.gradle\cac
 		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:11:18-63
 	android:icon
 		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:10:18-52
-activity#com.tencent.ncnnyolox.MainActivity
+activity#com.tencent.ncnnhpe.MainActivity
 ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:12:9-19:20
 	android:screenOrientation
 		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:14:19-55
 	android:label
 		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:13:19-51
 	android:name
-		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:12:19-46
+		ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:12:19-66
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\src\main\AndroidManifest.xml:15:13-18:29
 action#android.intent.action.MAIN

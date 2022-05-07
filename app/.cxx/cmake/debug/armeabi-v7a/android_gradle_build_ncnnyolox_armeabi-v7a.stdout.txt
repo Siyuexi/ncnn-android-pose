@@ -1,2 +1,58 @@
 ninja: Entering directory `C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\.cxx\cmake\debug\armeabi-v7a'
-ninja: no work to do.
+[1/3] Building CXX object CMakeFiles/ncnnyolox.dir/mspn.cpp.o
+FAILED: CMakeFiles/ncnnyolox.dir/mspn.cpp.o 
+C:\Users\Siyuexi\AppData\Local\Android\Sdk\ndk\24.0.8215888\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi24 --sysroot=C:/Users/Siyuexi/AppData/Local/Android/Sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dncnnyolox_EXPORTS -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11 -MD -MT CMakeFiles/ncnnyolox.dir/mspn.cpp.o -MF CMakeFiles\ncnnyolox.dir\mspn.cpp.o.d -o CMakeFiles/ncnnyolox.dir/mspn.cpp.o -c C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp
+In file included from C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:5:
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.h:31:57: error: unknown type name 'Object'; did you mean 'jobject'?
+    int detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects);
+                                                        ^~~~~~
+                                                        jobject
+C:/Users/Siyuexi/AppData/Local/Android/Sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\jni.h:61:25: note: 'jobject' declared here
+typedef _jobject*       jobject;
+                        ^
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:66:21: warning: unsequenced modification and access to 'cur_row' [-Wunsequenced]
+            *cur_row++ = (*cur_row - mean1[0]) / std1[0];
+                    ^      ~~~~~~~
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:67:21: warning: unsequenced modification and access to 'cur_row' [-Wunsequenced]
+            *cur_row++ = (*cur_row - mean1[1]) / std1[1];
+                    ^      ~~~~~~~
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:68:21: warning: unsequenced modification and access to 'cur_row' [-Wunsequenced]
+            *cur_row++ = (*cur_row - mean1[2]) / std1[2];
+                    ^      ~~~~~~~
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:337:61: error: unknown type name 'Object'; did you mean 'jobject'?
+int SLPNet::detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects)
+                                                            ^~~~~~
+                                                            jobject
+C:/Users/Siyuexi/AppData/Local/Android/Sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\jni.h:61:25: note: 'jobject' declared here
+typedef _jobject*       jobject;
+                        ^
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:341:22: error: member reference type 'std::__vector_base<_jobject *, std::allocator<_jobject *>>::value_type' (aka '_jobject *') is a pointer; did you mean to use '->'?
+        if(objects[j].label!=0){
+           ~~~~~~~~~~^
+                     ->
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:341:23: error: no member named 'label' in '_jobject'
+        if(objects[j].label!=0){
+           ~~~~~~~~~~ ^
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:344:43: error: member reference type 'std::__vector_base<_jobject *, std::allocator<_jobject *>>::value_type' (aka '_jobject *') is a pointer; did you mean to use '->'?
+        cv::Rect_<float> rect = objects[j].rect;
+                                ~~~~~~~~~~^
+                                          ->
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:344:44: error: no member named 'rect' in '_jobject'
+        cv::Rect_<float> rect = objects[j].rect;
+                                ~~~~~~~~~~ ^
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:376:27: error: member reference type 'std::__vector_base<_jobject *, std::allocator<_jobject *>>::value_type' (aka '_jobject *') is a pointer; did you mean to use '->'?
+            if (objects[i].label != 0) {
+                ~~~~~~~~~~^
+                          ->
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:376:28: error: no member named 'label' in '_jobject'
+            if (objects[i].label != 0) {
+                ~~~~~~~~~~ ^
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:387:64: warning: expression result unused [-Wunused-value]
+            cv::circle(rgb, cv::Point2d(x_coord, y_coord), 1, (0, 255, 0), 2);
+                                                               ^
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:387:67: warning: expression result unused [-Wunused-value]
+            cv::circle(rgb, cv::Point2d(x_coord, y_coord), 1, (0, 255, 0), 2);
+                                                                  ^~~
+5 warnings and 8 errors generated.
+[2/3] Building CXX object CMakeFiles/ncnnyolox.dir/ncnnmodel.cpp.o
+ninja: build stopped: subcommand failed.

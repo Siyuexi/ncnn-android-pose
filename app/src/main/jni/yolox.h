@@ -19,13 +19,7 @@
 
 #include <net.h>
 
-struct Object
-{
-    cv::Rect_<float> rect;
-    int label;
-    float prob;
-   
-};
+#include "imageobject.h"
 
 
 class Yolox

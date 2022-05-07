@@ -4,3 +4,11 @@
 106	1255	673604115	CMakeFiles/ncnnyolox.dir/mspn.cpp.o	9ff01a0c1debb7aa
 0	1266	673604115	CMakeFiles/ncnnyolox.dir/yolox.cpp.o	a2c94a81d7a8b7e2
 1266	1474	673604115	C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/release/obj/armeabi-v7a/libncnnyolox.so	58a34163f5d41d75
+2	283	673607832	build.ninja	62d13d645f95702f
+0	11	0	clean	6290c422352a9b64
+2	284	673609824	build.ninja	62d13d645f95702f
+98	1231	673609826	CMakeFiles/ncnnmodel.dir/ndkcamera.cpp.o	21cdb3549c7ae2cb
+32	1252	673609826	CMakeFiles/ncnnmodel.dir/ncnnmodel.cpp.o	89f9bcd1c52144b
+64	1330	673609826	CMakeFiles/ncnnmodel.dir/mspn.cpp.o	34c1e4db69e1037b
+1	1368	673609826	CMakeFiles/ncnnmodel.dir/yolox.cpp.o	9d4c160e7143266a
+1368	1580	673609826	C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/release/obj/armeabi-v7a/libncnnmodel.so	6b1bc0195e85e885

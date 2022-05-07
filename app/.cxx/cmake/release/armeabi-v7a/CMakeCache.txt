@@ -153,7 +153,7 @@ CMAKE_OBJCOPY:FILEPATH=CMAKE_OBJCOPY-NOTFOUND
 CMAKE_OBJDUMP:FILEPATH=CMAKE_OBJDUMP-NOTFOUND
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ncnnyolox
+CMAKE_PROJECT_NAME:STATIC=ncnnmodel
 
 //Ranlib
 CMAKE_RANLIB:FILEPATH=C:/Users/Siyuexi/AppData/Local/Android/Sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe
@@ -227,6 +227,15 @@ OpenMP_C_LIB_NAMES:STRING=omp
 
 //Path to the omp library for OpenMP
 OpenMP_omp_LIBRARY:FILEPATH=C:/Users/Siyuexi/AppData/Local/Android/Sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.1/lib/linux/arm/libomp.so
+
+//Value Computed by CMake
+ncnnmodel_BINARY_DIR:STATIC=C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a
+
+//Dependencies for the target
+ncnnmodel_LIB_DEPENDS:STATIC=general;ncnn;general;opencv_core;general;opencv_imgproc;general;camera2ndk;general;mediandk;
+
+//Value Computed by CMake
+ncnnmodel_SOURCE_DIR:STATIC=C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni
 
 //Value Computed by CMake
 ncnnyolox_BINARY_DIR:STATIC=C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a

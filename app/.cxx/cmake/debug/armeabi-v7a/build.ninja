@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: ncnnyolox
+# Project: ncnnmodel
 # Configuration: Debug
 # =============================================================================
 
@@ -29,6 +29,70 @@ ninja_required_version = 1.5
 
 include rules.ninja
 
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target ncnnmodel
+
+
+#############################################
+# Order-only phony target for ncnnmodel
+
+build cmake_object_order_depends_target_ncnnmodel: phony
+build CMakeFiles/ncnnmodel.dir/ncnnmodel.cpp.o: CXX_COMPILER__ncnnmodel C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnnmodel.cpp || cmake_object_order_depends_target_ncnnmodel
+  DEFINES = -Dncnnmodel_EXPORTS
+  DEP_FILE = CMakeFiles\ncnnmodel.dir\ncnnmodel.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
+  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
+  OBJECT_DIR = CMakeFiles\ncnnmodel.dir
+  OBJECT_FILE_DIR = CMakeFiles\ncnnmodel.dir
+build CMakeFiles/ncnnmodel.dir/yolox.cpp.o: CXX_COMPILER__ncnnmodel C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/yolox.cpp || cmake_object_order_depends_target_ncnnmodel
+  DEFINES = -Dncnnmodel_EXPORTS
+  DEP_FILE = CMakeFiles\ncnnmodel.dir\yolox.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
+  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
+  OBJECT_DIR = CMakeFiles\ncnnmodel.dir
+  OBJECT_FILE_DIR = CMakeFiles\ncnnmodel.dir
+build CMakeFiles/ncnnmodel.dir/mspn.cpp.o: CXX_COMPILER__ncnnmodel C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp || cmake_object_order_depends_target_ncnnmodel
+  DEFINES = -Dncnnmodel_EXPORTS
+  DEP_FILE = CMakeFiles\ncnnmodel.dir\mspn.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
+  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
+  OBJECT_DIR = CMakeFiles\ncnnmodel.dir
+  OBJECT_FILE_DIR = CMakeFiles\ncnnmodel.dir
+build CMakeFiles/ncnnmodel.dir/ndkcamera.cpp.o: CXX_COMPILER__ncnnmodel C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ndkcamera.cpp || cmake_object_order_depends_target_ncnnmodel
+  DEFINES = -Dncnnmodel_EXPORTS
+  DEP_FILE = CMakeFiles\ncnnmodel.dir\ndkcamera.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
+  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
+  OBJECT_DIR = CMakeFiles\ncnnmodel.dir
+  OBJECT_FILE_DIR = CMakeFiles\ncnnmodel.dir
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target ncnnmodel
+
+
+#############################################
+# Link the shared library C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libncnnmodel.so
+
+build C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnmodel.so: CXX_SHARED_LIBRARY_LINKER__ncnnmodel CMakeFiles/ncnnmodel.dir/ncnnmodel.cpp.o CMakeFiles/ncnnmodel.dir/yolox.cpp.o CMakeFiles/ncnnmodel.dir/mspn.cpp.o CMakeFiles/ncnnmodel.dir/ndkcamera.cpp.o | C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/lib/libncnn.a C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_imgproc.a C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info
+  LINK_FLAGS = -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
+  LINK_LIBRARIES = C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/lib/libncnn.a C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_imgproc.a -lcamera2ndk -lmediandk -fopenmp -static-openmp -landroid -ljnigraphics C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a -ldl -lm -llog -latomic -lm
+  OBJECT_DIR = CMakeFiles\ncnnmodel.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  SONAME = libncnnmodel.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libncnnmodel.so
+  TARGET_PDB = ncnnmodel.so.dbg
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\.cxx\cmake\debug\armeabi-v7a && C:\Users\Siyuexi\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+build edit_cache: phony CMakeFiles/edit_cache.util
 
 #############################################
 # Utility command for rebuild_cache
@@ -40,74 +104,10 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target ncnnyolox
-
-
-#############################################
-# Order-only phony target for ncnnyolox
-
-build cmake_object_order_depends_target_ncnnyolox: phony
-build CMakeFiles/ncnnyolox.dir/ncnnmodel.cpp.o: CXX_COMPILER__ncnnyolox C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnnmodel.cpp || cmake_object_order_depends_target_ncnnyolox
-  DEFINES = -Dncnnyolox_EXPORTS
-  DEP_FILE = CMakeFiles\ncnnyolox.dir\ncnnmodel.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
-  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
-  OBJECT_DIR = CMakeFiles\ncnnyolox.dir
-  OBJECT_FILE_DIR = CMakeFiles\ncnnyolox.dir
-build CMakeFiles/ncnnyolox.dir/yolox.cpp.o: CXX_COMPILER__ncnnyolox C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/yolox.cpp || cmake_object_order_depends_target_ncnnyolox
-  DEFINES = -Dncnnyolox_EXPORTS
-  DEP_FILE = CMakeFiles\ncnnyolox.dir\yolox.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
-  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
-  OBJECT_DIR = CMakeFiles\ncnnyolox.dir
-  OBJECT_FILE_DIR = CMakeFiles\ncnnyolox.dir
-build CMakeFiles/ncnnyolox.dir/mspn.cpp.o: CXX_COMPILER__ncnnyolox C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp || cmake_object_order_depends_target_ncnnyolox
-  DEFINES = -Dncnnyolox_EXPORTS
-  DEP_FILE = CMakeFiles\ncnnyolox.dir\mspn.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
-  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
-  OBJECT_DIR = CMakeFiles\ncnnyolox.dir
-  OBJECT_FILE_DIR = CMakeFiles\ncnnyolox.dir
-build CMakeFiles/ncnnyolox.dir/ndkcamera.cpp.o: CXX_COMPILER__ncnnyolox C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ndkcamera.cpp || cmake_object_order_depends_target_ncnnyolox
-  DEFINES = -Dncnnyolox_EXPORTS
-  DEP_FILE = CMakeFiles\ncnnyolox.dir\ndkcamera.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -std=gnu++11
-  INCLUDES = -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/include/ncnn -isystem C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/jni/include
-  OBJECT_DIR = CMakeFiles\ncnnyolox.dir
-  OBJECT_FILE_DIR = CMakeFiles\ncnnyolox.dir
-
-# =============================================================================
-# Link build statements for SHARED_LIBRARY target ncnnyolox
-
-
-#############################################
-# Link the shared library C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libncnnyolox.so
-
-build C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnyolox.so: CXX_SHARED_LIBRARY_LINKER__ncnnyolox CMakeFiles/ncnnyolox.dir/ncnnmodel.cpp.o CMakeFiles/ncnnyolox.dir/yolox.cpp.o CMakeFiles/ncnnyolox.dir/mspn.cpp.o CMakeFiles/ncnnyolox.dir/ndkcamera.cpp.o | C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/lib/libncnn.a C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_imgproc.a C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a
-  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info
-  LINK_FLAGS = -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ncnn-20211208-android/armeabi-v7a/lib/libncnn.a C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_imgproc.a -lcamera2ndk -lmediandk -fopenmp -static-openmp -landroid -ljnigraphics C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/opencv-mobile-4.5.4-android/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a -ldl -lm -llog -latomic -lm
-  OBJECT_DIR = CMakeFiles\ncnnyolox.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  SONAME = libncnnyolox.so
-  SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libncnnyolox.so
-  TARGET_PDB = ncnnyolox.so.dbg
-
-#############################################
-# Utility command for edit_cache
-
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\.cxx\cmake\debug\armeabi-v7a && C:\Users\Siyuexi\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
-  DESC = No interactive CMake dialog available...
-  restat = 1
-build edit_cache: phony CMakeFiles/edit_cache.util
-# =============================================================================
 # Target aliases.
 
-build libncnnyolox.so: phony C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnyolox.so
-build ncnnyolox: phony C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnyolox.so
+build libncnnmodel.so: phony C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnmodel.so
+build ncnnmodel: phony C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnmodel.so
 # =============================================================================
 # Folder targets.
 
@@ -119,7 +119,7 @@ build ncnnyolox: phony C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncn
 #############################################
 # The main all target.
 
-build all: phony C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnyolox.so
+build all: phony C$:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnmodel.so
 
 #############################################
 # Make the all target the default.

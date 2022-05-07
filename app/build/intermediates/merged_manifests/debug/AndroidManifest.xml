@@ -16,10 +16,9 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:testOnly="true" >
+        android:roundIcon="@mipmap/ic_launcher_round" >
         <activity
-            android:name="com.tencent.ncnnyolox.MainActivity"
+            android:name="com.tencent.ncnnhpe.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
