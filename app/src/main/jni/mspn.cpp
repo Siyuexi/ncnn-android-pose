@@ -336,6 +336,7 @@ int SLPNet::load(AAssetManager* mgr, const char* modeltype, int _target_size, co
 
 int SLPNet::detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects)
 {
+    ncnn::Extractor ex = slpnet.create_extractor();
     for(int j = 0;j<objects.size();j++) {
         //only picked "person" label
         if(objects[j].label!=0){
@@ -357,7 +358,6 @@ int SLPNet::detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects)
         convertMat2pointer(input, x);
 
         ncnn::Mat in(192, 256, 3, x);
-        ncnn::Extractor ex = slpnet.create_extractor();
         ex.input("data", in);
         ncnn::Mat out;
         ex.extract("output_heatmaps", out);
@@ -372,10 +372,6 @@ int SLPNet::detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects)
         iter = 1;
         point_begin = 0;
         for (int i = line_begin; i < line_end; i = i + 2) {
-            //only picked "person" label
-            if (objects[i].label != 0) {
-                continue;
-            }
             cv::line(rgb, cv::Point2d(int(preds[pair_line[i]]), int(preds[pair_line[i] + 17])),
                      cv::Point2d(int(preds[pair_line[i + 1]]), int(preds[pair_line[i + 1] + 17])),
                      cv::Scalar(153, 102, 255), 4);
