@@ -1,0 +1,12 @@
+com.rangi.nanodet
+array cpugpu_array
+array model_array
+array model_lite_mspn_array
+drawable ic_launcher_background
+id buttonSwitchCamera
+id cameraview
+layout main
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name

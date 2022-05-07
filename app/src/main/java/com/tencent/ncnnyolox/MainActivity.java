@@ -20,14 +20,11 @@ import android.content.pm.PackageManager;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.Spinner;
 
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -36,11 +33,11 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
 {
     public static final int REQUEST_CAMERA = 100;
 
-    private NcnnYolox ncnnyolox = new NcnnYolox();
+    private NcnnModel ncnnyolox = new NcnnModel();
     private int facing = 1;
 
-    private Spinner spinnerModel;
-    private Spinner spinnerCPUGPU;
+//    private Spinner spinnerModel;
+//    private Spinner spinnerCPUGPU;
     private int current_model = 0;
     private int current_cpugpu = 0;
 
@@ -74,43 +71,43 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
                 facing = new_facing;
             }
         });
-
-        spinnerModel = (Spinner) findViewById(R.id.spinnerModel);
-        spinnerModel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id)
-            {
-                if (position != current_model)
-                {
-                    current_model = position;
-                    reload();
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0)
-            {
-            }
-        });
-
-        spinnerCPUGPU = (Spinner) findViewById(R.id.spinnerCPUGPU);
-        spinnerCPUGPU.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id)
-            {
-                if (position != current_cpugpu)
-                {
-                    current_cpugpu = position;
-                    reload();
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0)
-            {
-            }
-        });
-
+//
+//        spinnerModel = (Spinner) findViewById(R.id.spinnerModel);
+//        spinnerModel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id)
+//            {
+//                if (position != current_model)
+//                {
+//                    current_model = position;
+//                    reload();
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> arg0)
+//            {
+//            }
+//        });
+//
+//        spinnerCPUGPU = (Spinner) findViewById(R.id.spinnerCPUGPU);
+//        spinnerCPUGPU.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id)
+//            {
+//                if (position != current_cpugpu)
+//                {
+//                    current_cpugpu = position;
+//                    reload();
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> arg0)
+//            {
+//            }
+//        });
+//
         reload();
     }
 

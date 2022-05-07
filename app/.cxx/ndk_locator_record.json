@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "C:\\Users\\12108\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669",
+  "ndkFolder": "C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk\\ndk\\24.0.8215888",
   "messages": [
     {
       "level": "INFO",
@@ -7,7 +7,7 @@
     },
     {
       "level": "INFO",
-      "message": "ndk.dir in local.properties is C:\\Users\\12108\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669"
+      "message": "ndk.dir in local.properties is C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk\\ndk\\24.0.8215888"
     },
     {
       "level": "INFO",
@@ -15,27 +15,27 @@
     },
     {
       "level": "INFO",
-      "message": "sdkFolder is C:\\Users\\12108\\AppData\\Local\\Android\\Sdk"
+      "message": "sdkFolder is C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk"
     },
     {
       "level": "INFO",
-      "message": "Considering C:\\Users\\12108\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669 by ndk.dir"
+      "message": "Considering C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk\\ndk\\24.0.8215888 by ndk.dir"
     },
     {
       "level": "INFO",
-      "message": "Considering C:\\Users\\12108\\AppData\\Local\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder"
+      "message": "Considering C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder"
     },
     {
       "level": "INFO",
-      "message": "Considering C:\\Users\\12108\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669 in SDK ndk folder"
+      "message": "Considering C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk\\ndk\\24.0.8215888 in SDK ndk folder"
     },
     {
       "level": "INFO",
-      "message": "Considering C:\\Users\\12108\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620 in SDK ndk folder"
+      "message": "Rejected C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder because that location has no source.properties"
     },
     {
       "level": "INFO",
-      "message": "Found requested ndk.dir (C:\\Users\\12108\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669) which has version 21.0.6113669"
+      "message": "Found requested ndk.dir (C:\\Users\\Siyuexi\\AppData\\Local\\Android\\Sdk\\ndk\\24.0.8215888) which has version 24.0.8215888"
     }
   ]
 }

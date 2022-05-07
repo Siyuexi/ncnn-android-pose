@@ -1,0 +1,1 @@
+C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\res\merged\debug\layout_main.xml.flat C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\res\merged\debug\values_values.arsc.flat 

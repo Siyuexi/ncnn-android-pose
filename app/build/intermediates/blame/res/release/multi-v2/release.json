@@ -1,0 +1,27 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Siyuexi\\Documents\\WorkSpaceForLocalLearning\\ncnn-android-pose\\app\\build\\intermediates\\res\\merged\\release\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Siyuexi\\Documents\\WorkSpaceForLocalLearning\\ncnn-android-pose\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,2",
+                        "startColumns": "-1,-1,-1,4",
+                        "startOffsets": "-1,-1,-1,57",
+                        "endColumns": "-1,-1,-1,45",
+                        "endOffsets": "-1,-1,-1,98"
+                    },
+                    "to": {
+                        "startLines": "2,6,9,12",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,164,254,353",
+                        "endLines": "5,8,11,12",
+                        "endColumns": "19,19,19,45",
+                        "endOffsets": "159,249,348,394"
+                    }
+                }
+            ]
+        }
+    ]
+}

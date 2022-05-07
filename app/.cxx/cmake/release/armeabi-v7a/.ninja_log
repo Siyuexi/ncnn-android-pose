@@ -1,0 +1,6 @@
+# ninja log v5
+72	1105	673604115	CMakeFiles/ncnnyolox.dir/ndkcamera.cpp.o	1f8f0993a0d282c0
+38	1151	673604115	CMakeFiles/ncnnyolox.dir/ncnnmodel.cpp.o	b4591d4844c35228
+106	1255	673604115	CMakeFiles/ncnnyolox.dir/mspn.cpp.o	9ff01a0c1debb7aa
+0	1266	673604115	CMakeFiles/ncnnyolox.dir/yolox.cpp.o	a2c94a81d7a8b7e2
+1266	1474	673604115	C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/release/obj/armeabi-v7a/libncnnyolox.so	58a34163f5d41d75

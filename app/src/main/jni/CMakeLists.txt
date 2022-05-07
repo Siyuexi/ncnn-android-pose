@@ -8,6 +8,6 @@ find_package(OpenCV REQUIRED core imgproc)
 set(ncnn_DIR ${CMAKE_SOURCE_DIR}/ncnn-20211208-android/${ANDROID_ABI}/lib/cmake/ncnn)
 find_package(ncnn REQUIRED)
 
-add_library(ncnnyolox SHARED yoloxncnn.cpp yolox.cpp slpn.h slpn.cpp ndkcamera.cpp)
+add_library(ncnnyolox SHARED ncnnmodel.cpp yolox.cpp mspn.h mspn.cpp ndkcamera.cpp)
 
 target_link_libraries(ncnnyolox ncnn ${OpenCV_LIBS} camera2ndk mediandk)

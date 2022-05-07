@@ -1,4 +1,4 @@
-# Install script for directory: E:/AndroidStudioProjects/ncnn-android-pose/app/src/main/jni
+# Install script for directory: C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/AndroidStudioProjects/ncnn-android-pose/app/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -318,7 +318,7 @@ int Yolox::load(AAssetManager* mgr, const char* modeltype, int _target_size, con
 }
 
 
-int Yolox::detect(const cv::Mat& rgb, std::vector<Object>& objects, int &index, float prob_threshold, float nms_threshold)
+int Yolox::detect(const cv::Mat& rgb, std::vector<Object>& objects, float prob_threshold, float nms_threshold)
 {
 
     int img_w = rgb.cols;
@@ -385,10 +385,6 @@ int Yolox::detect(const cv::Mat& rgb, std::vector<Object>& objects, int &index, 
     {
         objects[i] = proposals[picked[i]];
 
-        if(objects[i].label!=0){
-            continue;
-        }
-
         // adjust offset to original unpadded
         float x0 = (objects[i].rect.x) / scale;
         float y0 = (objects[i].rect.y) / scale;
@@ -407,17 +403,12 @@ int Yolox::detect(const cv::Mat& rgb, std::vector<Object>& objects, int &index, 
         objects[i].rect.height = y1 - y0;
 
 
-        int area = objects[i].rect.area();
-        if (area>max_area){
-            max_area = area;
-            index = i;
-        }
     }
 
     return 0;
 }
 
-int Yolox::draw(cv::Mat& rgb, const std::vector<Object>& objects, int index)
+int Yolox::draw(cv::Mat& rgb, const std::vector<Object>& objects)
 {
     static const char* class_names[] = {
             "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
@@ -458,7 +449,8 @@ int Yolox::draw(cv::Mat& rgb, const std::vector<Object>& objects, int index)
 
     for (size_t i = 0; i < objects.size(); i++)
     {
-        if(i!=index){
+        //only picked "person" label
+        if(objects[i].label!=0){
             continue;
         }
         const Object& obj = objects[i];
