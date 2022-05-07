@@ -7,3 +7,7 @@
 在红米K30pro（骁龙865）上可以达到十几帧的速度（CPU），单独的yolox可以达到25FPS，目前只实现了同步处理，也就是yolox执行完之后再进行姿态估计，后续可能会考虑改成异步，进一步提升帧率。
 
 在坤坤的篮球视频上测了一波，感觉还不错？望粉丝轻喷
+
+---
+
+5/7/2022:Gestaltxu Updated his self-defined released in this repo
