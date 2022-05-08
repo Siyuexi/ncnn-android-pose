@@ -251,38 +251,38 @@ void get_final_preds(ncnn::Mat out, std::vector<float>& center, std::vector<floa
 
 
 
-SLPNet::SLPNet()
+Mspn::Mspn()
 {
     blob_pool_allocator.set_size_compare_ratio(0.f);
     workspace_pool_allocator.set_size_compare_ratio(0.f);
 }
 
-int SLPNet::load(const char* modeltype, int _target_size, const float* _mean_vals, const float* _norm_vals, bool use_gpu)
+int Mspn::load(const char* modeltype, int _target_size, const float* _mean_vals, const float* _norm_vals, bool use_gpu)
 {
-    slpnet.clear();
+    mspn.clear();
     blob_pool_allocator.clear();
     workspace_pool_allocator.clear();
 
     ncnn::set_cpu_powersave(2);
     ncnn::set_omp_num_threads(ncnn::get_big_cpu_count());
 
-    slpnet.opt = ncnn::Option();
+    mspn.opt = ncnn::Option();
 
 #if NCNN_VULKAN
-    slpnet.opt.use_vulkan_compute = use_gpu;
+    mspn.opt.use_vulkan_compute = use_gpu;
 #endif
-//    slpnet.register_custom_layer("YoloV5Focus", YoloV5Focus_layer_creator);
-    slpnet.opt.num_threads = ncnn::get_big_cpu_count();
-    slpnet.opt.blob_allocator = &blob_pool_allocator;
-    slpnet.opt.workspace_allocator = &workspace_pool_allocator;
+//    mspn.register_custom_layer("YoloV5Focus", YoloV5Focus_layer_creator);
+    mspn.opt.num_threads = ncnn::get_big_cpu_count();
+    mspn.opt.blob_allocator = &blob_pool_allocator;
+    mspn.opt.workspace_allocator = &workspace_pool_allocator;
 
     char parampath[256];
     char modelpath[256];
     sprintf(parampath, "%s.param", modeltype);
     sprintf(modelpath, "%s.bin", modeltype);
 
-    slpnet.load_param(parampath);
-    slpnet.load_model(modelpath);
+    mspn.load_param(parampath);
+    mspn.load_model(modelpath);
 
 
     target_size = _target_size;
@@ -296,23 +296,23 @@ int SLPNet::load(const char* modeltype, int _target_size, const float* _mean_val
     return 0;
 }
 
-int SLPNet::load(AAssetManager* mgr, const char* modeltype, int _target_size, const float* _mean_vals, const float* _norm_vals, bool use_gpu)
+int Mspn::load(AAssetManager* mgr, const char* modeltype, int _target_size, const float* _mean_vals, const float* _norm_vals, bool use_gpu)
 {
-    slpnet.clear();
+    mspn.clear();
     blob_pool_allocator.clear();
     workspace_pool_allocator.clear();
 
     ncnn::set_cpu_powersave(2);
     ncnn::set_omp_num_threads(ncnn::get_big_cpu_count());
 
-    slpnet.opt = ncnn::Option();
+    mspn.opt = ncnn::Option();
 #if NCNN_VULKAN
-    slpnet.opt.use_vulkan_compute = use_gpu;
+    mspn.opt.use_vulkan_compute = use_gpu;
 #endif
-//    slpnet.register_custom_layer("YoloV5Focus", YoloV5Focus_layer_creator);
-    slpnet.opt.num_threads = ncnn::get_big_cpu_count();
-    slpnet.opt.blob_allocator = &blob_pool_allocator;
-    slpnet.opt.workspace_allocator = &workspace_pool_allocator;
+//    mspn.register_custom_layer("YoloV5Focus", YoloV5Focus_layer_creator);
+    mspn.opt.num_threads = ncnn::get_big_cpu_count();
+    mspn.opt.blob_allocator = &blob_pool_allocator;
+    mspn.opt.workspace_allocator = &workspace_pool_allocator;
 
     char parampath[256];
     char modelpath[256];
@@ -320,8 +320,8 @@ int SLPNet::load(AAssetManager* mgr, const char* modeltype, int _target_size, co
     sprintf(modelpath, "%s.bin", modeltype);
 
     __android_log_print(ANDROID_LOG_DEBUG, "model", "%s", modeltype);
-    slpnet.load_param(mgr, parampath);
-    slpnet.load_model(mgr, modelpath);
+    mspn.load_param(mgr, parampath);
+    mspn.load_model(mgr, modelpath);
 
     target_size = _target_size;
     mean_vals[0] = _mean_vals[0];
@@ -334,9 +334,9 @@ int SLPNet::load(AAssetManager* mgr, const char* modeltype, int _target_size, co
     return 0;
 }
 
-int SLPNet::detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects)
+int Mspn::detect_and_draw(const cv::Mat& rgb, std::vector<Object>& objects)
 {
-    ncnn::Extractor ex = slpnet.create_extractor();
+    ncnn::Extractor ex = mspn.create_extractor();
     for(int j = 0;j<objects.size();j++) {
         //only picked "person" label
         if(objects[j].label!=0){

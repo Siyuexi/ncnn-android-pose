@@ -8,7 +8,7 @@ android {
 
         minSdkVersion 24
 
-        applicationId "com.rangi.nanodet"
+        applicationId "com.gestalt.ncnnhpe"
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 1

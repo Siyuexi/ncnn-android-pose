@@ -60,3 +60,6 @@
 1192	1425	673609508	C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnmodel.so	9d0419c258dc424b
 3	1088	673611076	CMakeFiles/ncnnmodel.dir/mspn.cpp.o	253f7f966772e355
 1088	1308	673611076	C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnmodel.so	9d0419c258dc424b
+3	1075	673712572	CMakeFiles/ncnnmodel.dir/ncnnmodel.cpp.o	24e54ff66c671445
+29	1128	673712572	CMakeFiles/ncnnmodel.dir/mspn.cpp.o	253f7f966772e355
+1129	2011	673712573	C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libncnnmodel.so	9d0419c258dc424b

@@ -15,10 +15,10 @@ extern int k1;
 
 
 
-class SLPNet
+class Mspn
 {
 public:
-    SLPNet();
+    Mspn();
 
     int load(const char* modeltype, int target_size, const float* mean_vals, const float* norm_vals, bool use_gpu = false);
 
@@ -28,7 +28,7 @@ public:
 
 private:
 
-    ncnn::Net slpnet;
+    ncnn::Net mspn;
 
     float* x = new float[192*256*3];
 

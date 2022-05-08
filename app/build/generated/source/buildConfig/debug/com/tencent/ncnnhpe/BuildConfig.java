@@ -5,7 +5,7 @@ package com.tencent.ncnnhpe;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");
-  public static final String APPLICATION_ID = "com.rangi.nanodet";
+  public static final String APPLICATION_ID = "com.gestalt.ncnnhpe";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = 1;

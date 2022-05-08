@@ -1,4 +1,4 @@
-com.rangi.nanodet
+com.gestalt.ncnnhpe
 array cpugpu_array
 array model_array
 array model_lite_mspn_array

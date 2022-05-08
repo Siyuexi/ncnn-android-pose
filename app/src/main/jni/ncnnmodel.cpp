@@ -117,7 +117,7 @@ static int draw_fps(cv::Mat& rgb)
 }
 
 static Yolox* g_yolox = 0;
-static SLPNet* g_slpnet = 0;
+static Mspn* g_mspn = 0;
 static ncnn::Mutex lock;
 
 class MyNdkCamera : public NdkCameraWindow
@@ -130,18 +130,18 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
 {
     clock_t time_begin, time_end;
     time_begin = clock();
-    // nanodet
+
     {
         ncnn::MutexLockGuard g(lock);
 
-        if (g_yolox && g_slpnet)
+        if (g_yolox && g_mspn)
         {
             std::vector<Object> objects;
             g_yolox->detect(rgb, objects);
             //if anything detected
             if(!objects.empty()) {
                 g_yolox->draw(rgb, objects);
-                g_slpnet->detect_and_draw(rgb, objects);
+                g_mspn->detect_and_draw(rgb, objects);
             }
         }
         else
@@ -178,8 +178,8 @@ JNIEXPORT void JNI_OnUnload(JavaVM* vm, void* reserved)
 
         delete g_yolox;
         g_yolox = 0;
-        delete g_slpnet;
-        g_slpnet = 0;
+        delete g_mspn;
+        g_mspn = 0;
     }
 
     delete g_camera;
@@ -240,18 +240,18 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_ncnnhpe_NcnnModel_loadModel(JNIEnv* 
             // no gpu
             delete g_yolox;
             g_yolox = 0;
-            delete g_slpnet;
-            g_slpnet = 0;
+            delete g_mspn;
+            g_mspn = 0;
         }
         else
         {
             if (!g_yolox)
                 g_yolox = new Yolox;
             g_yolox->load(mgr, modeltype, target_size, mean_vals[(int)modelid], norm_vals[(int)modelid], use_gpu);
-            if (!g_slpnet)
-                g_slpnet = new SLPNet;
+            if (!g_mspn)
+                g_mspn = new Mspn;
 
-            g_slpnet->load(mgr, "lite-mspn", 256, mean1, std1, use_gpu);
+            g_mspn->load(mgr, "lite-mspn", 256, mean1, std1, use_gpu);
 
         }
     }

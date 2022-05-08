@@ -1,16 +1,6 @@
 ninja: Entering directory `C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\.cxx\cmake\release\armeabi-v7a'
-[0/1] Re-running CMake...
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/.cxx/cmake/release/armeabi-v7a
-[1/5] Building CXX object CMakeFiles/ncnnmodel.dir/ndkcamera.cpp.o
-C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/ndkcamera.cpp:152:117: warning: format specifies type 'long' but the argument has type 'int64_t' (aka 'long long') [-Wformat]
-    __android_log_print(ANDROID_LOG_WARN, "NdkCamera", "onCaptureSequenceCompleted %p %d %ld", session, sequenceId, frameNumber);
-                                                                                         ~~~                        ^~~~~~~~~~~
-                                                                                         %lld
-1 warning generated.
-[2/5] Building CXX object CMakeFiles/ncnnmodel.dir/ncnnmodel.cpp.o
-[3/5] Building CXX object CMakeFiles/ncnnmodel.dir/mspn.cpp.o
+[1/3] Building CXX object CMakeFiles/ncnnmodel.dir/ncnnmodel.cpp.o
+[2/3] Building CXX object CMakeFiles/ncnnmodel.dir/mspn.cpp.o
 C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:66:21: warning: unsequenced modification and access to 'cur_row' [-Wunsequenced]
             *cur_row++ = (*cur_row - mean1[0]) / std1[0];
                     ^      ~~~~~~~
@@ -20,12 +10,11 @@ C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/m
 C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:68:21: warning: unsequenced modification and access to 'cur_row' [-Wunsequenced]
             *cur_row++ = (*cur_row - mean1[2]) / std1[2];
                     ^      ~~~~~~~
-C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:387:64: warning: expression result unused [-Wunused-value]
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:383:64: warning: expression result unused [-Wunused-value]
             cv::circle(rgb, cv::Point2d(x_coord, y_coord), 1, (0, 255, 0), 2);
                                                                ^
-C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:387:67: warning: expression result unused [-Wunused-value]
+C:/Users/Siyuexi/Documents/WorkSpaceForLocalLearning/ncnn-android-pose/app/src/main/jni/mspn.cpp:383:67: warning: expression result unused [-Wunused-value]
             cv::circle(rgb, cv::Point2d(x_coord, y_coord), 1, (0, 255, 0), 2);
                                                                   ^~~
 5 warnings generated.
-[4/5] Building CXX object CMakeFiles/ncnnmodel.dir/yolox.cpp.o
-[5/5] Linking CXX shared library C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\cmake\release\obj\armeabi-v7a\libncnnmodel.so
+[3/3] Linking CXX shared library C:\Users\Siyuexi\Documents\WorkSpaceForLocalLearning\ncnn-android-pose\app\build\intermediates\cmake\release\obj\armeabi-v7a\libncnnmodel.so
